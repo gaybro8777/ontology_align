@@ -15,14 +15,14 @@ class OntoInterface:
     def align_ontology(self):
         get_ontos = GetOntos()
         ontos = get_ontos.samples()
-        Align(ontos)
-        Align.align()
+        align_onto = Align(ontos)
+        align_onto.align()
 
     def read_ontology(self):
         get_ontos = GetOntos()
         ontos = get_ontos.samples()
-        Read(ontos)
-        Read.read()
+        read_onto = Read(ontos)
+        read_onto.read()
     
     def train_ml(self):
         dataset = sys.argv[2]
@@ -33,11 +33,12 @@ class OntoInterface:
 
         train_parser = TrainParser()
         list_x, list_y = train_parser.create_tests(ontos, reference)
-
         ml = learn()
-        ml.test_split(list_x, list_y)
+        processed_x, processed_y = ml.train_preprocessor(list_x, list_y)
+        ml.test_split(processed_x, processed_y)
         ml.train_ia()
         ml.predict_test()
+        ml.save_model()
 
 if len(sys.argv) > 1:
     face = OntoInterface()

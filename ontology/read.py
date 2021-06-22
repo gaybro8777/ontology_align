@@ -6,21 +6,23 @@ class Read:
         self.ontos = ontos
 
     def read(self):
-        for pos in range(self.ontos):
-            file = open("./results/ontology"+pos+".txt", "w+")
+        for pos in range(len(self.ontos)):
+            file = open(f'./results/ontology{pos}.txt', "w+")
 
-            file.write("Classes - ")
+            file.write("Classes - \n")
             list_classes = list(self.ontos[pos].classes())
-            file.write(list_classes)
+            file.writelines(str(list_classes))
 
-            file.write("Individuals - ")
+            file.write("\n\nIndividuals - \n")
             list_individuals = list(self.ontos[pos].individuals())
-            file.write(list_individuals)
+            file.writelines(str(list_individuals))
 
-            file.write("Object properties - ")
+            file.write("\n\nObject properties - \n")
             list_object_properties = list(self.ontos[pos].object_properties())
-            file.write(list_object_properties)
+            file.writelines(str(list_object_properties))
 
-            file.write("Data properties - ")
+            file.write("\n\nData properties - \n")
             list_data_properties = list(self.ontos[pos].data_properties())
-            file.write(list_data_properties)
+            file.writelines(str(list_data_properties))
+            
+            file.close()

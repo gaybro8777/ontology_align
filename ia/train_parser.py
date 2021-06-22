@@ -10,8 +10,22 @@ class TrainParser:
             list_classes.append(list(onto.classes()))
             list_properties.append(list(onto.object_properties()))
 
-        list_input = [*np.array(np.meshgrid(list_classes[0], list_classes[1])).T.reshape(-1, 2),
-                      *np.array(np.meshgrid(list_properties[0], list_properties[1])).T.reshape(-1, 2)]
+        list_classes_names = []
+        for class_list in list_classes:
+            list_name = []
+            for class_object in class_list:
+                list_name.append(class_object.name)
+            list_classes_names.append(list_name)
+
+        list_properties_names = []
+        for property_list in list_properties:
+            list_name = []
+            for property_object in property_list:
+                list_name.append(property_object.name)
+            list_properties_names.append(list_name)
+
+        list_input = [*np.array(np.meshgrid(list_classes_names[0], list_classes_names[1])).T.reshape(-1, 2),
+                      *np.array(np.meshgrid(list_properties_names[0], list_properties_names[1])).T.reshape(-1, 2)]
 
         return list_input
 
@@ -22,8 +36,22 @@ class TrainParser:
             list_classes.append(list(onto.classes()))
             list_properties.append(list(onto.object_properties()))
 
-        list_x = [*np.array(np.meshgrid(list_classes[0], list_classes[1])).T.reshape(-1, 2),
-                  *np.array(np.meshgrid(list_properties[0], list_properties[1])).T.reshape(-1, 2)]
+        list_classes_names = []
+        for class_list in list_classes:
+            list_name = []
+            for class_object in class_list:
+                list_name.append(class_object.name)
+            list_classes_names.append(list_name)
+
+        list_properties_names = []
+        for property_list in list_properties:
+            list_name = []
+            for property_object in property_list:
+                list_name.append(property_object.name)
+            list_properties_names.append(list_name)
+
+        list_x = [*np.array(np.meshgrid(list_classes_names[0], list_classes_names[1])).T.reshape(-1, 2),
+                  *np.array(np.meshgrid(list_properties_names[0], list_properties_names[1])).T.reshape(-1, 2)]
 
         list_refs = []
         for line in reference:
