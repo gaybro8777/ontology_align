@@ -1,0 +1,11 @@
+Classes - 
+[onto.rdf#.Entry, onto.rdf#.Article, onto.rdf#.Book, onto.rdf#.Booklet, onto.rdf#.Conference, onto.rdf#.Inproceedings, onto.rdf#.Inbook, onto.rdf#.Incollection, onto.rdf#.Manual, onto.rdf#.Mastersthesis, onto.rdf#.Misc, onto.rdf#.Phdthesis, onto.rdf#.Proceedings, onto.rdf#.TechReport, onto.rdf#.Unpublished]
+
+Individuals - 
+[]
+
+Object properties - 
+[]
+
+Data properties - 
+[onto.rdf#.hasAuthor, onto.rdf#.hasTitle, onto.rdf#.hasJournal, onto.rdf#.hasYear, onto.rdf#.humanCreator, onto.rdf#.hasPublisher, onto.rdf#.pageChapterData, onto.rdf#.hasBooktitle, onto.rdf#.hasSchool, onto.rdf#.hasInstitution, onto.rdf#.hasNote, onto.rdf#.hasKey, onto.rdf#.hasAddress, onto.rdf#.hasAnnotation, onto.rdf#.hasChapter, onto.rdf#.hasCrossref, onto.rdf#.hasEdition, onto.rdf#.hasEditor, onto.rdf#.howPublished, onto.rdf#.hasMonth, onto.rdf#.hasNumber, onto.rdf#.hasOrganization, onto.rdf#.hasPages, onto.rdf#.hasSeries, onto.rdf#.hasType, onto.rdf#.hasVolume, onto.rdf#.hasAffiliation, onto.rdf#.hasAbstract, onto.rdf#.hasContents, onto.rdf#.hasCopyright, onto.rdf#.hasISBN, onto.rdf#.hasISSN, onto.rdf#.hasKeywords, onto.rdf#.hasLanguage, onto.rdf#.hasLocation, onto.rdf#.hasLCCN, onto.rdf#.hasMrnumber, onto.rdf#.hasPrice, onto.rdf#.hasSize, onto.rdf#.hasURL]
